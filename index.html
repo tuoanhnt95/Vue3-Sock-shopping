@@ -17,15 +17,17 @@
           <div class="product-image">
             <!-- image goes here -->
             <img :src="image" alt="">
-            <a :href="url">See more!</a>
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p v-if="inventory > 10">In Stock</p>
+            <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+            <p v-if="onSale">On Sale</p>
+            <p v-else>Out of Stock</p>
           </div>
         </div>
       </div>
     </div>
-
     <!-- Import App -->
     <script src="./main.js"></script>
 
