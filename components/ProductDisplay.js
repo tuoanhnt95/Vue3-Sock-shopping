@@ -28,6 +28,7 @@ app.component('product-display', {
             <li v-for="detail in details">{{ detail }}</li>
           </ul>
   
+
           <div 
             v-for="(variant, index) in variants" 
             :key="variant.id" 
@@ -51,7 +52,6 @@ app.component('product-display', {
             @click="removeFromCart">
             Remove from Cart
           </button>
-
         </div>
       </div>
     </div>`,
