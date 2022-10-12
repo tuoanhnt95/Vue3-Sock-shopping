@@ -6,11 +6,10 @@ const app = Vue.createApp({
       }
   },
   methods: {
-    updateCart(id) {
-      this.cart.push(id)
-    },
-    removeCart() {
-      this.cart.pop()
-    }
+      updateCart(id) {
+          this.cart.push(id)
+      }
   }
 })
+
+Vue.config.devtools = true;
